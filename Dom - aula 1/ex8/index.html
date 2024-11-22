@@ -1,0 +1,34 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Eventos de Formulário</title>
+</head>
+<body>
+  <form id="form">
+    <label for="name">Nome:</label>
+    <input type="text" id="name" name="name" required>
+    <button type="submit">Enviar</button>
+  </form>
+  <p id="message"></p>
+  <script>
+    const form = document.getElementById('form');
+    const nameInput = document.getElementById('name');
+    const message = document.getElementById('message');
+
+    // Evento input
+    nameInput.addEventListener('input', () => {
+      message.textContent = `Olá, ${nameInput.value}`;
+    });
+
+    // Evento submit
+    form.addEventListener('submit', (event) => {
+      event.preventDefault(); // Evita envio padrão
+      alert(`Formulário enviado com o nome: ${nameInput.value}`);
+    });
+  </script>
+</body>
+</html>
+

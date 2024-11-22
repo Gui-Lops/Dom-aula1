@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tecla pressionada</title>
+</head>
+<body>
+    <h1>Pressione uma tecla:</h1>
+    <p id="resultado">Nenhuma tecla pressionada ainda.</p>
+
+    <script>
+        // Função que será chamada quando uma tecla for pressionada
+        document.addEventListener('keydown', function(event) {
+            // Obtém o valor da tecla pressionada
+            var teclaPressionada = event.key;
+            
+            // Exibe a tecla pressionada no elemento com id "resultado"
+            document.getElementById('resultado').textContent = 'Tecla pressionada: ' + teclaPressionada;
+        });
+    </script>
+</body>
+</html>
